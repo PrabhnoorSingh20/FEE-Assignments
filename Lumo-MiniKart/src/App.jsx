@@ -1,0 +1,13 @@
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import Home from './pages/Home'
+import Products from './pages/Products'
+import Cart from './pages/Cart'
+import About from './pages/About'
+import Checkout from './pages/Checkout'
+import NotFound from './pages/NotFound'
+
+export default function App() {
+  return <Routes><Route element={<Layout/>}><Route path="/" element={<Home/>}/><Route path="/products" element={<Products/>}/><Route path="/cart" element={<Cart/>}/><Route path="/about" element={<About/>}/><Route path="/checkout" element={<Checkout/>}/><Route path="*" element={<NotFound/>}/></Route></Routes>
+}
